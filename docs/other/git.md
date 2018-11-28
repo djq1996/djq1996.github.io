@@ -298,42 +298,16 @@ git config --global credential.helper store
 ```
 
 ## 删除大的 依赖文件 的 git 监听
-
+```bash
 例如：node_moudel
+git rm --cached stupid.txt //从版本库中rm 文件，working dicrectory中仍然保留，如果要删除目录下所有文件包括子目录中的 
 
-首先在.gitignore 中写入下面代码
-
-```py
-node_modules/
-jspm_packages/
+git rm -r --cached node_moudel
+在.gitignore中添加要忽略的文件
+commit
+push
+其他成员pull，working directory中对应的文件会删除，所以如果文件重要，要提前备份。
 ```
-
-在命令行进入仓库目录
-删除 github 上.gitignore 中新加的选项
-
-```py
-git rm -r –cached .
-```
-
-将删除后的 add
-
-```py
-git add .
-```
-
-再 commit
-
-```py
-git commit -m”.gitignore is now working”
-```
-
-最后 push 一下
-
-```py
-git push
-```
-
-好了，大功告成，再去看我的 github，太干净了。。
 
 ## 服务器git 
 ```bash

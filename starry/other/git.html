@@ -13,7 +13,7 @@
   <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
   <meta name="msapplication-TileColor" content="#333">
     
-    <link rel="preload" href="/starry/assets/css/0.styles.3fb045ae.css" as="style"><link rel="preload" href="/starry/assets/js/app.cda52788.js" as="script"><link rel="preload" href="/starry/assets/js/16.20abbbdd.js" as="script"><link rel="prefetch" href="/starry/assets/js/10.59867908.js"><link rel="prefetch" href="/starry/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/starry/assets/js/3.b71ff2c0.js"><link rel="prefetch" href="/starry/assets/js/4.19a4cc9b.js"><link rel="prefetch" href="/starry/assets/js/5.e9a53771.js"><link rel="prefetch" href="/starry/assets/js/6.c4f08a3e.js"><link rel="prefetch" href="/starry/assets/js/7.0d2af869.js"><link rel="prefetch" href="/starry/assets/js/8.307d9114.js"><link rel="prefetch" href="/starry/assets/js/9.458fb690.js"><link rel="prefetch" href="/starry/assets/js/11.d3b021fa.js"><link rel="prefetch" href="/starry/assets/js/12.13d77098.js"><link rel="prefetch" href="/starry/assets/js/13.a5d4dc42.js"><link rel="prefetch" href="/starry/assets/js/14.ba130650.js"><link rel="prefetch" href="/starry/assets/js/15.f2edcbe0.js"><link rel="prefetch" href="/starry/assets/js/17.2f4c62d8.js"><link rel="prefetch" href="/starry/assets/js/18.f0183a3a.js"><link rel="prefetch" href="/starry/assets/js/19.7a0601cb.js"><link rel="prefetch" href="/starry/assets/js/20.4f5c7322.js"><link rel="prefetch" href="/starry/assets/js/21.c04d5c45.js"><link rel="prefetch" href="/starry/assets/js/22.ad5ee422.js">
+    <link rel="preload" href="/starry/assets/css/0.styles.3fb045ae.css" as="style"><link rel="preload" href="/starry/assets/js/app.06c56437.js" as="script"><link rel="preload" href="/starry/assets/js/16.6768b383.js" as="script"><link rel="prefetch" href="/starry/assets/js/10.59867908.js"><link rel="prefetch" href="/starry/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/starry/assets/js/3.b71ff2c0.js"><link rel="prefetch" href="/starry/assets/js/4.19a4cc9b.js"><link rel="prefetch" href="/starry/assets/js/5.e9a53771.js"><link rel="prefetch" href="/starry/assets/js/6.c4f08a3e.js"><link rel="prefetch" href="/starry/assets/js/7.0d2af869.js"><link rel="prefetch" href="/starry/assets/js/8.307d9114.js"><link rel="prefetch" href="/starry/assets/js/9.458fb690.js"><link rel="prefetch" href="/starry/assets/js/11.d3b021fa.js"><link rel="prefetch" href="/starry/assets/js/12.13d77098.js"><link rel="prefetch" href="/starry/assets/js/13.a5d4dc42.js"><link rel="prefetch" href="/starry/assets/js/14.ba130650.js"><link rel="prefetch" href="/starry/assets/js/15.f2edcbe0.js"><link rel="prefetch" href="/starry/assets/js/17.2f4c62d8.js"><link rel="prefetch" href="/starry/assets/js/18.f0183a3a.js"><link rel="prefetch" href="/starry/assets/js/19.7a0601cb.js"><link rel="prefetch" href="/starry/assets/js/20.4f5c7322.js"><link rel="prefetch" href="/starry/assets/js/21.c04d5c45.js"><link rel="prefetch" href="/starry/assets/js/22.ad5ee422.js">
     <link rel="stylesheet" href="/starry/assets/css/0.styles.3fb045ae.css">
   </head>
   <body>
@@ -117,14 +117,15 @@ git config --global user.email &quot;email&quot;
 </code></pre></div><h3 id="查看-git-全局配置"><a href="#查看-git-全局配置" aria-hidden="true" class="header-anchor">#</a> 查看 Git 全局配置</h3> <div class="language- extra-class"><pre class="language-text"><code>git config --list
 
 git config --global credential.helper store
-</code></pre></div><h2 id="删除大的-依赖文件-的-git-监听"><a href="#删除大的-依赖文件-的-git-监听" aria-hidden="true" class="header-anchor">#</a> 删除大的 依赖文件 的 git 监听</h2> <p>例如：node_moudel</p> <p>首先在.gitignore 中写入下面代码</p> <div class="language-py extra-class"><pre class="language-py"><code>node_modules<span class="token operator">/</span>
-jspm_packages<span class="token operator">/</span>
-</code></pre></div><p>在命令行进入仓库目录
-删除 github 上.gitignore 中新加的选项</p> <div class="language-py extra-class"><pre class="language-py"><code>git rm <span class="token operator">-</span>r –cached <span class="token punctuation">.</span>
-</code></pre></div><p>将删除后的 add</p> <div class="language-py extra-class"><pre class="language-py"><code>git add <span class="token punctuation">.</span>
-</code></pre></div><p>再 commit</p> <div class="language-py extra-class"><pre class="language-py"><code>git commit <span class="token operator">-</span>m”<span class="token punctuation">.</span>gitignore <span class="token keyword">is</span> now working”
-</code></pre></div><p>最后 push 一下</p> <div class="language-py extra-class"><pre class="language-py"><code>git push
-</code></pre></div><p>好了，大功告成，再去看我的 github，太干净了。。</p> <h2 id="服务器git"><a href="#服务器git" aria-hidden="true" class="header-anchor">#</a> 服务器git</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">groupadd</span> <span class="token function">git</span>
+</code></pre></div><h2 id="删除大的-依赖文件-的-git-监听"><a href="#删除大的-依赖文件-的-git-监听" aria-hidden="true" class="header-anchor">#</a> 删除大的 依赖文件 的 git 监听</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>例如：node_moudel
+<span class="token function">git</span> <span class="token function">rm</span> --cached stupid.txt //从版本库中rm 文件，working dicrectory中仍然保留，如果要删除目录下所有文件包括子目录中的 
+
+<span class="token function">git</span> <span class="token function">rm</span> -r --cached node_moudel
+在.gitignore中添加要忽略的文件
+commit
+push
+其他成员pull，working directory中对应的文件会删除，所以如果文件重要，要提前备份。
+</code></pre></div><h2 id="服务器git"><a href="#服务器git" aria-hidden="true" class="header-anchor">#</a> 服务器git</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">groupadd</span> <span class="token function">git</span>
 adduser <span class="token function">git</span> -g <span class="token function">git</span>
 
 
@@ -152,6 +153,6 @@ adduser <span class="token function">git</span> -g <span class="token function">
 
 <span class="token function">git</span> clone git@47.100.26.246:/home/gitrepo/starry-server.git
 </code></pre></div><p><a href="https://www.cnblogs.com/luozx207/p/9628195.html" target="_blank" rel="noopener noreferrer">Centos服务器ssh免密登录以及搭建私有git服务器<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/28/2018, 5:33:14 PM</span></div></div> <!----> </div> <!----></div></div>
-    <script src="/starry/assets/js/16.20abbbdd.js" defer></script><script src="/starry/assets/js/app.cda52788.js" defer></script>
+    <script src="/starry/assets/js/16.6768b383.js" defer></script><script src="/starry/assets/js/app.06c56437.js" defer></script>
   </body>
 </html>
