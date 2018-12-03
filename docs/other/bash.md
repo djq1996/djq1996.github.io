@@ -58,8 +58,36 @@ set nu # 在vimrc文件的最后添加：
 ：wq
 source /etc/bashrc #手动加载配置：
 ```
+## tar 压缩 解压
+### 压缩
+```bash 
 
-## 创建，压缩，移动，拷贝文件
+tar -cvf examples.tar files|dir
+#说明：
+-c, --create  create a new archive 创建一个归档文件
+-v, --verbose verbosely list files processed 显示创建归档文件的进程
+-f, --file=ARCHIVE use archive file or device ARCHIVE  后面要立刻接被处理的档案名,比如--file=examples.tar
+
+#举例：
+tar -cvf file.tar file1       #file1文件
+tar -cvf file.tar file1 file2 #file1，file2文件
+tar -cvf file.tar dir         #dir目录
+
+```
+### 解压
+```bash 
+tar -xvf examples.tar （解压至当前目录下）
+tar -xvf examples.tar  -C /path (/path 解压至其它路径)
+
+#说明：
+-x, --extract, extract files from an archive 从一个归档文件中提取文件
+
+#举例：
+tar -xvf file.tar
+tar -xvf file.tar -C /temp  #解压到temp目录下
+
+```
+## 创建，移动，拷贝文件
 
 ### copy file
 
