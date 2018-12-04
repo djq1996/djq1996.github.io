@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "d": "vuepress dev docs",
-    "b": "vuepress build docs",
-    "deploy": "bash dey.sh",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "sh dey.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
