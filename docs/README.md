@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /icons/apple-touch-icon-152x152.png
+# heroImage: /icons/apple-touch-icon-152x152.png
 actionText: 光看不练是退步 →
 actionLink: /javascript/js
 features:

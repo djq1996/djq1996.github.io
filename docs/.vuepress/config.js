@@ -34,7 +34,7 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: 'web',
+        text: 'Front-end',
         items: [
           {
             text: 'Javascript',
@@ -59,16 +59,30 @@ module.exports = {
         ]
       },
       {
-        text: 'Python3',
-        link: '/other/python3'
-      },
-      {
-        text: 'Sql',
-        link: '/other/sql'
-      },
-      {
-        text: 'Command',
-        link: '/other/bash'
+        text: 'Back-end',
+        items: [
+          {
+            text: 'Node',
+            link: '/terminal/node'
+          },
+          {
+            text: 'Bash',
+            link: '/terminal/bash'
+          },
+          {
+            text: 'Liunx',
+            link: '/terminal/liunx'
+          },
+          {
+            text: 'Python3',
+            link: '/other/python3'
+          },
+          {
+            text: 'Sql',
+            link: '/other/sql'
+          },
+          
+        ]
       },
       {
         text: 'Git',
@@ -104,6 +118,13 @@ module.exports = {
           title: 'Vue',
           collapsable: false,
           children: ['vue-cli', 'vue']
+        }
+      ],
+      '/terminal/': [
+        {
+          title: 'Terminal',
+          collapsable: false,
+          children: ['node','bash', 'liunx']
         }
       ]
     },
