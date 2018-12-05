@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'JianQiang blog',
+  title: 'Hi, Welcome to starry',
   description: '种一棵树，最好的时间是十年前，其次是现在。',
   port: 1996,
   // base: '/starry/',

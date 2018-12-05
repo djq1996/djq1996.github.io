@@ -1,13 +1,13 @@
 ---
 home: true
 # heroImage: /icons/apple-touch-icon-152x152.png
-actionText: 光看不练是退步 →
+actionText: To learn →
 actionLink: /javascript/js
 features:
 - title: 笔记
-  details: Web,Python3,sql,bash ...
+  details: Js,Node,Angular,Vue,Webpack,Css3,Git,Python3,sql,Liunx ...
 - title: 总结
-  details: coding 感悟,Code snippet,funtion。
+  details: coding feeling,Code snippet,funtion。
 - title: 收集
   details: review code 收集一些优秀的博文供参考。
 footer: starry in JianQiang blog
