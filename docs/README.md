@@ -5,7 +5,7 @@ actionText: To learn →
 actionLink: /javascript/js
 features:
 - title: 笔记
-  details: Js,Node,Angular,Vue,Webpack,Css3,Git,Python3,sql,Liunx ...
+  details: front end,back end, liunx, Git ...
 - title: 总结
   details: coding feeling,Code snippet,funtion。
 - title: 收集
