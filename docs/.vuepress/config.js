@@ -2,7 +2,7 @@ module.exports = {
   title: 'Hi, Welcome to starry',
   description: '种一棵树，最好的时间是十年前，其次是现在。',
   port: 1996,
-  base: '/starry/',
+  // base: '/starry/',
   dest: 'starry',
   head: [
     [
@@ -80,8 +80,7 @@ module.exports = {
           {
             text: 'Sql',
             link: '/other/sql'
-          },
-          
+          }
         ]
       },
       {
@@ -124,7 +123,7 @@ module.exports = {
         {
           title: 'Terminal',
           collapsable: false,
-          children: ['node','bash', 'liunx']
+          children: ['node', 'bash', 'liunx']
         }
       ]
     },
