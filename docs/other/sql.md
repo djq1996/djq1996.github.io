@@ -4,7 +4,7 @@ sidebar: 'auto'
 
 # SQL
 
-## mysql
+## mysql8
 
 ```sql
 
@@ -12,15 +12,20 @@ sidebar: 'auto'
 mysql -u root -p
 mysql -u dev -pdev
 
--- 创建用户
+
+-- 创建用户 密码必须大小写加符号 八位
 CREATE USER 'dev'@'localhost' IDENTIFIED BY 'dev';
-CREATE USER 'dev01'@'127.0.0.1' IDENTIFIED BY 'dev01';
-CREATE USER 'dev02'@'%' IDENTIFIED BY 'dev02';
+CREATE USER 'dev1'@'127.0.0.1' IDENTIFIED BY 'Dev1123.';
+CREATE USER 'dev2'@'%' IDENTIFIED BY 'dev02';
 
 -- 赋予权限
 GRANT ALL ON test.* TO `dev`@`localhost` WITH GRANT OPTION;
 GRANT ALL ON test.* TO `dev02`@`%` WITH GRANT OPTION;
 GRANT ALL ON *.* TO `dev`@`localhost` WITH GRANT OPTION;
+-- 查看权限
+
+SHOW GRANTS FOR [name];
+SHOW GRANTS FOR 'dev1'@'localhost';
 
 -- 删除用户单个权限
 

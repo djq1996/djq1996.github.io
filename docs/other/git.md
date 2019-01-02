@@ -187,13 +187,16 @@ git push -u origin master # 简写
 # 缓存
 1. git stash
 
-# bug 解决完毕
 # 查看缓存开发进度保存
 git stash list  /
 # 恢复
 2. git stash apply
 # 恢复并删除暂存
 3. git stash pop
+# 删除全部缓存
+4. git stash clear
+# 删除单个缓存
+4. git stash drop stash@{0}
 ```
 
 查看文件历史记录
@@ -298,9 +301,10 @@ git config --global credential.helper store
 ```
 
 ## 删除大的 依赖文件 的 git 监听
+
 ```bash
 例如：node_moudel
-git rm --cached stupid.txt //从版本库中rm 文件，working dicrectory中仍然保留，如果要删除目录下所有文件包括子目录中的 
+git rm --cached stupid.txt //从版本库中rm 文件，working dicrectory中仍然保留，如果要删除目录下所有文件包括子目录中的
 
 git rm -r --cached node_moudel
 在.gitignore中添加要忽略的文件
@@ -309,7 +313,8 @@ push
 其他成员pull，working directory中对应的文件会删除，所以如果文件重要，要提前备份。
 ```
 
-## 服务器git 
+## 服务器 git
+
 ```bash
 groupadd git
 adduser git -g git
@@ -332,12 +337,12 @@ git init --bare sample.git # 创建项目
 
 chown -R git:git sample.git #把仓库所属用户改为git。
 
-# 克隆问题 git-upload-pack: command not found  
+# 克隆问题 git-upload-pack: command not found
 # because the server  git is not the default address
-ln -s /usr/local/git/bin/git-upload-pack /usr/bin/git-upload-pack 
+ln -s /usr/local/git/bin/git-upload-pack /usr/bin/git-upload-pack
 ln -s /usr/local/git/bin/git-receive-pack /usr/bin/git-receive-pack
 
 git clone git@47.100.26.246:/home/gitrepo/starry-server.git
 ```
 
-[Centos服务器ssh免密登录以及搭建私有git服务器](https://www.cnblogs.com/luozx207/p/9628195.html)
+[Centos 服务器 ssh 免密登录以及搭建私有 git 服务器](https://www.cnblogs.com/luozx207/p/9628195.html)
