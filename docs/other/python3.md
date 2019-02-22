@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 ---
 
 # Python3
@@ -18,7 +18,7 @@ sidebar: "auto"
 查看 Python 位置
 
 ```bash
- $  which python  # 也可以查看node...
+which python  # 也可以查看node...
 ```
 
 ### Python 数据类型

@@ -47,6 +47,10 @@ ng generate component <componentname> --module app
 
 # 简写 ng g c --module app 指定主模块app
 ng generate component <componentname> --module app
+
+# 在 src/locale 目录下创建一个文件，可以指定输出路径（output path）：
+--output-path src/locale
+ng xi18n --output-path src/locale
 ```
 
 ### 组件错误

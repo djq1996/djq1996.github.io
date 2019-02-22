@@ -47,7 +47,7 @@ String.split() 执行的操作与 Array.join 执行的操作是相反的。
 
 ### 匹配位置条件
 
-- 匹配位置的：^ $
+- 匹配位置的：^ \$
 - 匹配并且需要支持分组的时候需要括号来包裹：(匹配的模式)
 - 匹配条件的：|
 - 匹配集合的：[]
@@ -221,20 +221,4 @@ arguments 伪变量的 length 属性是某次调用的实际参数的个数。
         <a href="javascript:f(1,2,3);">参数个数正确时的函数调用</a>
     </body>
 </html>
-```
-
-## 获取 URL 参数信息
-
-```js
-function getUrlParam(name) {
-  //构造一个含有目标参数的正则表达式对象
-  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
-  //匹配目标参数
-  var r = window.location.search.substr(1).match(reg);
-  //返回参数值
-  if (r != null) {
-    return decodeURI(r[2]); //decodeURL编码一致
-  }
-  return null;
-}
 ```

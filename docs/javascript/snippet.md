@@ -1,4 +1,7 @@
+# Function
+
 ## 获取当前日期 （yyyy-MM-dd HH:MM:SS）
+
 ```bash
 const getNowFormatDate = () => {
   const date = new Date();
@@ -14,27 +17,70 @@ const getNowFormatDate = () => {
           + seperator2 + fill(date.getSeconds());
   return currentdate;
 };
-module.exports = {
-  getNowFormatDate,
-};
+const formatTime = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+// 补零
+const formatNumber = n => {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
 
 ```
-## Json 根据key值 排序
+
+## 获取 URL 参数信息
+
+```js
+function getUrlParam(name) {
+  //构造一个含有目标参数的正则表达式对象
+  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+  //匹配目标参数
+  var r = window.location.search.substr(1).match(reg);
+  //返回参数值
+  if (r != null) {
+    return decodeURI(r[2]); //decodeURL编码一致
+  }
+  return null;
+}
+```
+
+## 检测是否微信浏览器
+
+```js
+var wx = (function() {
+  return navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1;
+})();
+if (wx) {
+  alert('是微信');
+} else {
+  alert('不是微信');
+}
+```
+
+## Json 根据 key 值 排序
 
 ```javascript
 var people = [
   {
-    name: "a75",
+    name: 'a75',
     item1: false,
     item2: false
   },
   {
-    name: "z32",
+    name: 'z32',
     item1: true,
     item2: false
   },
   {
-    name: "e77",
+    name: 'e77',
     item1: false,
     item2: false
   }
@@ -46,7 +92,7 @@ function sortByKey(array, key) {
     return x < y ? -1 : x > y ? 1 : 0;
   });
 }
-people = sortByKey(people, "name");
+people = sortByKey(people, 'name');
 ```
 
 ## 收藏 48 个 JavaScript！
